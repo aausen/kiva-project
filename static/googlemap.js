@@ -2,6 +2,9 @@
 // function googleMap(){
 // //showing map on index.html
 
+
+
+
 //     const startingCoords = {
 //         lat: -34.397,
 //         lng: 150.644,
@@ -17,6 +20,8 @@
 $( document ).ready(function() {
 
     let countries = [];
+
+    
 
     let mapOptions = {
         zoom: 3,
@@ -91,8 +96,9 @@ $( document ).ready(function() {
             }.bind(this)
         });
     }
-
+    countryCode = ""
     function showCountries() {
+        
         for (var i=0; i<countries.length; i++) {
             countries[i].setMap(map);
 
@@ -106,8 +112,14 @@ $( document ).ready(function() {
 
             google.maps.event.addListener(countries[i], 'click', function(event) {
                 alert(this.title+' ('+this.code+')');
+               
+                fetchByCountryCode(this.code)
+                // countryCode = this.code;
+                // console.log("Country Code  =", countryCode)
             });
         }
+
+        countryCode = this.code
     }
 
     function createCountry(coords, country) {
@@ -124,5 +136,7 @@ $( document ).ready(function() {
 
         countries.push(currentCountry);
     }
-
+    // console.log("Country Code  =", countryCode)
 });
+
+
