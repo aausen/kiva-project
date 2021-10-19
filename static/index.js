@@ -1,11 +1,11 @@
 
 
 console.log("This is in the js file!")
+ 
+let theData;
+ const fetchByCountryCode = async (countryCode) => {
 
-
- const fetchByCountryCode = (countryCode) => {
-console.log(countryCode, typeof countryCode)
-fetch('https://api.kivaws.org/graphql', {
+const  data =   fetch('https://api.kivaws.org/graphql', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ query: `{
@@ -41,6 +41,7 @@ fetch('https://api.kivaws.org/graphql', {
     }
   }` }),
 })
-  .then(res => res.json())
-  .then(res => console.log(res.data))
+
+return data;
+  
 }

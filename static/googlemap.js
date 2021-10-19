@@ -4,7 +4,14 @@ $( document ).ready(function() {
 
     let countries = [];
 
+    const modal = document.querySelector('.modal-overlay')
+
+    console.log(modal)
+
+   modal.addEventListener('click', () => {
+    modal.style.display = 'none'
     
+   })
 
     let mapOptions = {
         zoom: 3,
@@ -93,10 +100,27 @@ $( document ).ready(function() {
                 this.setOptions({fillColor: "#f5c879", 'fillOpacity': 0});
             });
 
-            google.maps.event.addListener(countries[i], 'click', function(event) {
-                alert(this.title+' ('+this.code+')');
+            google.maps.event.addListener(countries[i], 'click', async function(event) {
+             //   alert(this.title+' ('+this.code+')');
                
-                fetchByCountryCode(this.code)
+               const loadedData = await (await fetchByCountryCode(this.code)).json()
+               modal.style.display = 'flex'
+
+
+
+                const innermodal = document.querySelector('.modal')
+                loadedData.data.lend.loans.values.forEach( (element) => {
+                    // probably look better as table, add p tag inside div
+                    const para = document.createElement('div');
+
+                    para.append(element.name)
+                    innermodal.append(
+                       para
+                    )
+                }
+                )
+
+                console.log(loadedData , 'theD')
                 // countryCode = this.code;
                 // console.log("Country Code  =", countryCode)
             });
