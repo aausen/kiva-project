@@ -1,21 +1,4 @@
 
-// function googleMap(){
-// //showing map on index.html
-
-
-
-
-//     const startingCoords = {
-//         lat: -34.397,
-//         lng: 150.644,
-//     };
-
-//     const basicMap = new google.maps.Map(document.querySelector('#map'), {
-//         center: new google.maps.LatLng(0,0),
-//         zoom: 2
-//     });
-
-// }
 
 $( document ).ready(function() {
 
