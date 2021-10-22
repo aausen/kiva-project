@@ -111,6 +111,7 @@ $( document ).ready(function() {
                 const innermodal = document.querySelector('.modal')
                 loadedData.data.lend.loans.values.forEach( (element) => {
                     // probably look better as table, add p tag inside div
+                    //data attributes hidden for modal
                     const para = document.createElement('div');
 
                     para.append(element.name)
@@ -120,7 +121,7 @@ $( document ).ready(function() {
                 }
                 )
 
-                console.log(loadedData , 'theD')
+                console.log(loadedData , 'theData')
                 // countryCode = this.code;
                 // console.log("Country Code  =", countryCode)
             });
