@@ -11,12 +11,15 @@ app.jinja_env.undefined = StrictUndefined
 
 @app.route("/")
 def show_homepage():
+    """Displays homepage."""
+    
     return render_template("index.html")
 
+@app.route("/more")
+def show_more_info():
+    """Dislays more information page."""
 
-
-
-
+    return render_template("more-info.html")
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", debug = True)
