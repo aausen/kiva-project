@@ -119,11 +119,22 @@ $( document ).ready(function() {
                 else{loadedData.data.lend.loans.values.forEach( (element) => {
                     // probably look better as table, add p tag inside div
                     //data attributes hidden for modal
-                    const para = document.createElement('div');
+                    const loanResults = document.createElement('div');
 
-                    para.append(element.name )
+                    //image of loanee
+                    let img = new Image()
+                    img.src = element.image.url
+
+                    //description of loan
+                    // let description = element.whySpecial
+                    
+                    //loan amount
+                    let loanAmount = element.loanAmount
+
+                    loanResults.append(img,element.name, loanAmount )
+
                     innermodal.append(
-                       para
+                       loanResults
                     )
                 }
                 )
