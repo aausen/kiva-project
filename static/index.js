@@ -1,6 +1,6 @@
 
 
-console.log("This is in the js file!")
+console.log("This is in the index.js file!")
  
 let theData;
  const fetchByCountryCode = async (countryCode) => {
