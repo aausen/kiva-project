@@ -3,8 +3,37 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/static/style.css"/> 
+
+        <!-- scripts for google maps -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="/static/googlemap.js"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVCEp58zylvYCauf9u2ndLWAJN-F0n47c">
+        </script>
+
     </head>
     <body>
+        <div class="row header-row">
+            </div>
+            <div class="small-3 large-2 xxlarge-2 columns header-column logo-area">
+                <a class="header-button" href="https://www.kiva.org/">
+                    <svg class="icon icon-new-kiva-logo">
+                        <use xlink:href="#icon-new-kiva-logo"></use>
+                    </svg>
+                </a>
+            </div>
+            
         <h1>This is our new site!</h1>
+        <!-- if map doesn't display/screen reader add alt info and failed to load -->
+        <script src="/static/googlemap.js"></script>
+        <script src="/static/index.js"></script>
+
+        <div id="map"></div>
+
+        <div class="modal-overlay">
+            <div class="modal"></div>
+        </div>
+        <button>Click me!</button>
     </body>
 </html>
