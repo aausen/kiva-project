@@ -10,7 +10,7 @@ const  data =   fetch('https://api.kivaws.org/graphql', {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ query: `{
     lend {
-      loans (filters: {gender: female, country: ["${countryCode}"]}, limit: 5) {
+      loans (filters: { country: ["${countryCode}"]}, limit: 5) {
         totalCount
         values {
           name

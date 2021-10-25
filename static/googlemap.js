@@ -6,10 +6,11 @@ $( document ).ready(function() {
 
     const modal = document.querySelector('.modal-overlay')
 
-    console.log(modal)
+    // console.log(modal)
 
    modal.addEventListener('click', () => {
     modal.style.display = 'none'
+    document.querySelector('.modal').innerHTML = ""
     
    })
 
@@ -109,18 +110,26 @@ $( document ).ready(function() {
 
 
                 const innermodal = document.querySelector('.modal')
-                loadedData.data.lend.loans.values.forEach( (element) => {
+                if (loadedData.data.lend.loans.totalCount === 0){
+                    const noLoan = document.createElement('div');
+                    noLoan.append("No Loans available, Please choose another country")
+                    innermodal.append(noLoan)
+                    console.log(noLoan)
+                }
+                else{loadedData.data.lend.loans.values.forEach( (element) => {
                     // probably look better as table, add p tag inside div
+                    //data attributes hidden for modal
                     const para = document.createElement('div');
 
-                    para.append(element.name)
+                    para.append(element.name )
                     innermodal.append(
                        para
                     )
                 }
                 )
+            }
 
-                console.log(loadedData , 'theD')
+                console.log(loadedData , 'theData')
                 // countryCode = this.code;
                 // console.log("Country Code  =", countryCode)
             });
