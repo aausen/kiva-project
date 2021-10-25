@@ -1,19 +1,18 @@
-
-
-console.log("This is in the index.js file!")
- 
+console.log("This is in the more-info.js file!")
+let loanId = 2263314;
 let theData;
- const fetchByCountryCode = async (countryCode) => {
+ const fetchByLoanId = async (loandId) => {
 
 const  data =   fetch('https://api.kivaws.org/graphql', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ query: `{
     lend {
-      loans (filters: { country: ["${countryCode}"]}, limit: 5) {
+      loans (filters: {loanIds: ${loadId}}) {
         totalCount
         values {
           name
+          id
           loanAmount
           image {
             url(presetSize: small)
@@ -41,7 +40,9 @@ const  data =   fetch('https://api.kivaws.org/graphql', {
     }
   }` }),
 })
-
+console.log("hello");
+console.log(data);
 return data;
+
   
 }
