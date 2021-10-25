@@ -15,8 +15,9 @@ const  data =   fetch('https://api.kivaws.org/graphql', {
         values {
           name
           loanAmount
+          whySpecial
           image {
-            url(presetSize: small)
+            url(presetSize: default)
           }
           activity {
             name
