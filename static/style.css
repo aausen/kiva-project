@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #map {
     height: 500px;
     width: 100%;
@@ -81,3 +82,37 @@ html {
     background-color: #49953f;
     color: #fff;
 }
+||||||| 855eb08
+=======
+#map {
+    height: 500px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(33,33,33,.2);
+
+  }
+
+
+  .modal-overlay {
+    transition: 2s all;
+    display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(33,33,33,.7);
+  }
+
+
+  .modal {
+      transform: translate(15%, 15%);
+      width: 75%;
+      height: 75%;
+      position: relative;
+      background: white;
+      border-radius: 8px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+>>>>>>> 2dfdb0ba996814b7f25c94fc924dbfbf3daf35b6

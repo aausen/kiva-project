@@ -1,6 +1,5 @@
 import gql from "graphql-tag";
 
-
 // Function to query the Kiva Graphql API and return results
 
 const LOAN_QUERY = gql`
