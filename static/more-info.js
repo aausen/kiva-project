@@ -1,14 +1,14 @@
 console.log("This is in the more-info.js file!")
 let loanId = 2263314;
 let theData;
- const fetchByLoanId = async (loandId) => {
+ const fetchByLoanId = async (loanId) => {
 
 const  data =   fetch('https://api.kivaws.org/graphql', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ query: `{
     lend {
-      loans (filters: {loanIds: ${loadId}}) {
+      loans (filters: {loanIds: ${loanId}}) {
         totalCount
         values {
           name
