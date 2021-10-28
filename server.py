@@ -17,7 +17,7 @@ def show_homepage():
 
 @app.route("/more")
 def show_more_info():
-    """Dislays more information page."""
+    """Displays more information page."""
 
     return render_template("more-info.html")
 
