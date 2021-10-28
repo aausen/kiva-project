@@ -15,7 +15,7 @@ def show_homepage():
     
     return render_template("index.html")
 
-@app.route("/more")
+@app.route("/borrowers")
 def show_more_info():
     """Displays more information page."""
 
