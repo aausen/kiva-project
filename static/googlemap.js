@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
     let countries = [];
 
-    const modal = document.querySelector('.modal-overlay')
+    const modal = document.querySelector('.modal')
 
     // console.log(modal)
 
