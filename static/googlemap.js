@@ -112,6 +112,7 @@ $( document ).ready(function() {
                 const innermodal = document.querySelector('.modal')
                 if (loadedData.data.lend.loans.totalCount === 0){
                     const noLoan = document.createElement('div');
+
                     noLoan.append("No Loans available, Please choose another country")
                     innermodal.append(noLoan)
                     console.log(noLoan)
@@ -120,29 +121,61 @@ $( document ).ready(function() {
                     // probably look better as table, add p tag inside div
                     //data attributes hidden for modal
                     const loanResults = document.createElement('div');
-
+                    loanResults.classList.add('loan-row')
+                    //name of loanee
+                    let name = element.name;
                     //image of loanee
-                    let img = new Image()
-                    img.src = element.image.url
+                    let img = new Image();
+                    img.src = element.image.url;
 
+                    
+                    //id of loanee
+                    let loanerId = element.id
                     //description of loan
                     // let description = element.whySpecial
                     
+                    // button to view more info
+                    let btn = document.createElement("button");
+                    btn.id = "moreInfo"
+                    btn.innerHTML = "Learn More";
+                    btn.type = "button";
+                    btn.addEventListener('click', () => {
+                        window.location = `/more/${loanerId}`
+                    })
+                 
+                    btn.value = loanerId;
+
                     //loan amount
                     let loanAmount = element.loanAmount
 
-                    loanResults.append(img,element.name, loanAmount )
+                    // let borrows = [
+                    //     {img: img,
+                    //     Name: name,
+                    //     LoanAmount: loanAmount,
+                    //     button: btn}]
+                    //  console.log(borrows)
+
+            
+                        
+                    const nameElement = document.createElement('p')
+                    nameElement.innerHTML = name
+
+                    const loanElement =  document.createElement('p')
+                    loanElement.innerHTML = loanAmount
+                    
+                    loanResults.append(img, nameElement, loanElement,btn)
 
                     innermodal.append(
-                       loanResults
+                       loanResults,
+
+                       
                     )
                 }
                 )
             }
 
                 console.log(loadedData , 'theData')
-                // countryCode = this.code;
-                // console.log("Country Code  =", countryCode)
+
             });
         }
 
