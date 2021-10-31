@@ -144,55 +144,17 @@ $( document ).ready(function() {
                     })
                  
                     btn.value = loanerId;
-                    // btn.appendChild(document.createTextNode("Learn More"));
-                    // let btnText = btn.textContent = "Learn More"
-                    // btn.appendChild(btnText);
 
-                    // let btn = "<button value= '"+id+"'class='moreInfo'>Learn More</button>"
-                    // btn.value = id;
-                    // let btn: function() {"<button id='moreInfo' value='"+id+"'> Learn More </button>"};
-                    // console.log(btn.value)
-                    // document.getElementById("moreInfo").onclick
                     //loan amount
                     let loanAmount = element.loanAmount
 
-                    let borrows = [
-                        {img: img,
-                        Name: name,
-                        LoanAmount: loanAmount,
-                        button: btn}]
-                     console.log(borrows)
-                    
-                    // function generateTableHead(table, data) {
-                    //     let thead = table.createTHead();
-                    //     let row = thead.insertRow();
-                    //     for (let key of data) {
-                    //         let th = document.createElement("th");
-                    //         let text = document.createTextNode(key);
-                    //         th.appendChild(text);
-                    //         row.appendChild(th);
-                    //     }
-                    //   }
+                    // let borrows = [
+                    //     {img: img,
+                    //     Name: name,
+                    //     LoanAmount: loanAmount,
+                    //     button: btn}]
+                    //  console.log(borrows)
 
-                    // function generateTable(table, data){
-                    //     for (let element of data) {
-                    //         let row = table.insertRow();
-                    //         for (key in element) {
-                    //             let cell = row.insertCell();
-                    //             let text = document.createTextNode(element[key]);
-                    //             if(key === 'img' || key === 'btn') {
-                    //               cell.appendChild(element[key])
-                    //               continue
-                    //             }
-                    //             cell.appendChild(text);
-                    //         }
-                    //     }
-                    // }
-                    
-                    // let table = document.querySelector("table");
-                    // let data = Object.keys(borrows[0]);
-                    // generateTable(table, borrows);  
-                    // generateTableHead(table, data);
             
                         
                     const nameElement = document.createElement('p')
@@ -205,7 +167,7 @@ $( document ).ready(function() {
 
                     innermodal.append(
                        loanResults,
-                    //    table
+
                        
                     )
                 }
@@ -213,12 +175,10 @@ $( document ).ready(function() {
             }
 
                 console.log(loadedData , 'theData')
-                // countryCode = this.code;
-                // console.log("Country Code  =", countryCode)
+
             });
         }
 
-        // loanId = this.loanerId
         countryCode = this.code
     }
 

@@ -2,7 +2,7 @@ console.log("This is in the more-info.js file!")
 var loanId = window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1)
 console.log(loanId, 'loanId')
 
-console.log(window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1), 'windgow')
+// console.log(window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1), 'window')
 // let theData;
 const fetchByLoanId = (loanId) => {
 
