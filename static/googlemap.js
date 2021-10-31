@@ -112,6 +112,7 @@ $( document ).ready(function() {
                 const innermodal = document.querySelector('.modal')
                 if (loadedData.data.lend.loans.totalCount === 0){
                     const noLoan = document.createElement('div');
+
                     noLoan.append("No Loans available, Please choose another country")
                     innermodal.append(noLoan)
                     console.log(noLoan)
@@ -120,6 +121,7 @@ $( document ).ready(function() {
                     // probably look better as table, add p tag inside div
                     //data attributes hidden for modal
                     const loanResults = document.createElement('div');
+                    loanResults.classList.add('loan-row')
                     //name of loanee
                     let name = element.name;
                     //image of loanee
@@ -128,7 +130,7 @@ $( document ).ready(function() {
 
                     
                     //id of loanee
-                    let id = element.id
+                    let loanerId = element.id
                     //description of loan
                     // let description = element.whySpecial
                     
@@ -136,8 +138,12 @@ $( document ).ready(function() {
                     let btn = document.createElement("button");
                     btn.id = "moreInfo"
                     btn.innerHTML = "Learn More";
-                    // btn.type = "onClick";
-                    btn.value = id;
+                    btn.type = "button";
+                    btn.addEventListener('click', () => {
+                        window.location = `/more/${loanerId}`
+                    })
+                 
+                    btn.value = loanerId;
                     // btn.appendChild(document.createTextNode("Learn More"));
                     // let btnText = btn.textContent = "Learn More"
                     // btn.appendChild(btnText);
@@ -189,10 +195,13 @@ $( document ).ready(function() {
                     // generateTableHead(table, data);
             
                         
-                    
-                    
+                    const nameElement = document.createElement('p')
+                    nameElement.innerHTML = name
 
-                    loanResults.append(img,name, loanAmount,btn)
+                    const loanElement =  document.createElement('p')
+                    loanElement.innerHTML = loanAmount
+                    
+                    loanResults.append(img, nameElement, loanElement,btn)
 
                     innermodal.append(
                        loanResults,
@@ -209,6 +218,7 @@ $( document ).ready(function() {
             });
         }
 
+        // loanId = this.loanerId
         countryCode = this.code
     }
 

@@ -1,7 +1,10 @@
 console.log("This is in the more-info.js file!")
-let loanId = 2265887;
-let theData;
- const fetchByLoanId = (loanId) => {
+var loanId = window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1)
+console.log(loanId, 'loanId')
+
+console.log(window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1), 'windgow')
+// let theData;
+const fetchByLoanId = (loanId) => {
 
 const  data = fetch('https://api.kivaws.org/graphql', {
   method: 'POST',
@@ -80,11 +83,11 @@ loadedData.then(response => response.json())
       borrowerImage.append(img)
       borrowerActivity.append(loanActivity)
       borrowerCountry.append(country)
-      borrowerDescription.append(description)
+      borrowerDescription.append(description.replace(/(<|&lt;)br\s*\/*(>|&gt;)/g,' '))
       
 
     })
     console.log(borrowerInfo)});
-document.getElementById('lend-here').href="https://www.kiva.org/lend-beta/`${loanId}`"
+// document.getElementById('lend-here').href=`"https://www.kiva.org/lend-beta/${loanId}"`
 // *** need help here! I can't get the jquery to work here. When I hard code the loanId
 // it's working like I want, but not sure how to do it with jquery I guess :/
