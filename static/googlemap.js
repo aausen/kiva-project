@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
     let countries = [];
 
-    const modal = document.querySelector('.modal-overlay')
+    const modal = document.querySelector('.modal')
 
     // console.log(modal)
 
@@ -120,21 +120,84 @@ $( document ).ready(function() {
                     // probably look better as table, add p tag inside div
                     //data attributes hidden for modal
                     const loanResults = document.createElement('div');
-
+                    //name of loanee
+                    let name = element.name;
                     //image of loanee
-                    let img = new Image()
-                    img.src = element.image.url
+                    let img = new Image();
+                    img.src = element.image.url;
 
+                    
+                    //id of loanee
+                    let id = element.id
                     //description of loan
                     // let description = element.whySpecial
                     
+                    // button to view more info
+                    let btn = document.createElement("button");
+                    btn.id = "moreInfo"
+                    btn.innerHTML = "Learn More";
+                    // btn.type = "onClick";
+                    btn.value = id;
+                    // btn.appendChild(document.createTextNode("Learn More"));
+                    // let btnText = btn.textContent = "Learn More"
+                    // btn.appendChild(btnText);
+
+                    // let btn = "<button value= '"+id+"'class='moreInfo'>Learn More</button>"
+                    // btn.value = id;
+                    // let btn: function() {"<button id='moreInfo' value='"+id+"'> Learn More </button>"};
+                    // console.log(btn.value)
+                    // document.getElementById("moreInfo").onclick
                     //loan amount
                     let loanAmount = element.loanAmount
 
-                    loanResults.append(img,element.name, loanAmount )
+                    let borrows = [
+                        {img: img,
+                        Name: name,
+                        LoanAmount: loanAmount,
+                        button: btn}]
+                     console.log(borrows)
+                    
+                    // function generateTableHead(table, data) {
+                    //     let thead = table.createTHead();
+                    //     let row = thead.insertRow();
+                    //     for (let key of data) {
+                    //         let th = document.createElement("th");
+                    //         let text = document.createTextNode(key);
+                    //         th.appendChild(text);
+                    //         row.appendChild(th);
+                    //     }
+                    //   }
+
+                    // function generateTable(table, data){
+                    //     for (let element of data) {
+                    //         let row = table.insertRow();
+                    //         for (key in element) {
+                    //             let cell = row.insertCell();
+                    //             let text = document.createTextNode(element[key]);
+                    //             if(key === 'img' || key === 'btn') {
+                    //               cell.appendChild(element[key])
+                    //               continue
+                    //             }
+                    //             cell.appendChild(text);
+                    //         }
+                    //     }
+                    // }
+                    
+                    // let table = document.querySelector("table");
+                    // let data = Object.keys(borrows[0]);
+                    // generateTable(table, borrows);  
+                    // generateTableHead(table, data);
+            
+                        
+                    
+                    
+
+                    loanResults.append(img,name, loanAmount,btn)
 
                     innermodal.append(
-                       loanResults
+                       loanResults,
+                    //    table
+                       
                     )
                 }
                 )
