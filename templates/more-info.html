@@ -3,12 +3,49 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+              crossorigin="anonymous">
         <link rel="stylesheet" href="/static/style.css"/> 
+        <title>More borrower info</title>
 
-
-</head>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
     <body>
-    <p>This is our second page</p>
+        <div class="container">
+            <header>Borrower info page</header>
+            <h1>placeholder Researched backed</h1>
+            <div id="borrower-img"></div>
+            <p>Name:</p><div id="borrower-name"></div>
+            <p>Activity:</p><div id="borrower-activity"></div>
+            <p>Amount of loan:</p><div id="borrower-amount"></div>
+            <p>Country</p><div id="borrower-country"></div>
+            <div id='borrower-desc'></div>
+            <p>placeholder Our team regularly evaluates rigorous, evidence-based impact studies
+               in all our key sectors, and we’ve identified these loans as having the highest 
+               potential for impact on borrower outcomes.
+               Each Kiva loan helps people build a better future for themselves and their families.
+            </p>
+            <p>placeholder borrower info (borrower-profile)</p>
+            <!--file path in browser needs correct loan id to redirect in browser
+            to check out-->
+            <a class= "btn btn-success" id="lend-here">Lend Here</a>
+        </div>  
+        <script src="/static/more-info.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+                crossorigin="anonymous"></script>-->
+
+        
+        
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
+                crossorigin="anonymous"></script>      
     
     <script src="/static/more-info.js"></script>
     

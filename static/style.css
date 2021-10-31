@@ -30,6 +30,7 @@
       flex-wrap: wrap;
       background: white;
       border-radius: 8px;
+      z-index: 6;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
@@ -41,7 +42,8 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 .header-button {
-    background-color: #49953f;
+    background-color: #4faf4e;
+    padding: 20px;
 }
 
 .button.expanded {
@@ -116,5 +118,134 @@ html {
 }
 ::selection {
     background-color: #49953f;
-    color: #fff;
 }
+
+.borrower-image-wrapper.offset-borrower-image 
+.borrower-image[data-v-524d879b] {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.borrower-image-wrapper.absolute-positioned .borrower-image[data-v-524d879b], .borrower-image-wrapper.full-width-borrower-image .borrower-image[data-v-524d879b], .borrower-image-wrapper.offset-borrower-image .borrower-image[data-v-524d879b] {
+    position: absolute;
+}
+a img, hr {
+    border: 0;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+img {
+    border-style: none;
+}
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+a:focus, a:hover {
+    color: #006ed3;
+    text-decoration: underline;
+}
+a {
+    color: #118aec;
+    cursor: pointer;
+    line-height: inherit;
+    text-decoration: none;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+.row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 61.875
+rem
+;
+}
+.www-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+style attribute {
+    --text-primary: 33, 33, 33;
+    --text-primary-inverse: 245, 245, 245;
+    --text-secondary: 117, 117, 117;
+    --text-tertiary: 158, 158, 158;
+    --text-action: 43, 124, 95;
+    --text-action-highlight: 39, 112, 86;
+    --text-danger: 228, 42, 42;
+    --text-danger-highlight: 206, 38, 38;
+    --bg-primary: 255, 255, 255;
+    --bg-primary-inverse: 0, 0, 0;
+    --bg-secondary: 245, 245, 245;
+    --bg-tertiary: 224, 224, 224;
+    --bg-action: 43, 124, 95;
+    --bg-action-highlight: 39, 112, 86;
+    --bg-danger: 228, 42, 42;
+    --bg-danger-highlight: 206, 38, 38;
+    --bg-caution: 254, 225, 110;
+    --border-primary: 33, 33, 33;
+    --border-primary-inverse: 255, 255, 255;
+    --border-secondary: 117, 117, 117;
+    --border-tertiary: 196, 196, 196;
+    --border-action: 43, 124, 95;
+    --border-action-highlight: 39, 112, 86;
+    --border-danger: 228, 42, 42;
+    --border-danger-highlight: 206, 38, 38;
+}
+body, html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fff;
+    color: #484848;
+    font-family: PostGrotesk,Arial,Helvetica,sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    margin: 0;
+    padding: 0;
+}
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+}
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+
+
