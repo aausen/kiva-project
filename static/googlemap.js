@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
     // console.log(modal)
 
-   modal.addEventListener('click', () => {
+    modal.addEventListener('click', () => {
     modal.style.display = 'none'
     document.querySelector('.modal').innerHTML = ""
     
