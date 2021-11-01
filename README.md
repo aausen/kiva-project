@@ -1,4 +1,4 @@
-# The Kiva Lending Map
+# The Kiva Lending Map 🗺️
 
 descriptions will go here
 
@@ -27,12 +27,13 @@ descriptions will go here
 ## Explore the Map
 Users can choose a country and click on the map to discover current Kiva loans. 
 
+<!-- image here -->
 
 
 ## Learn More About the Borrower 
 Once a loan is selected, the user can find more information about the current loan. 
 
-
+<!-- image here -->
 
 # How to Install The Kiva Lending Map!
 
