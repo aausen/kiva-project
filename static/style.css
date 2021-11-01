@@ -39,10 +39,50 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+@media only screen and (min-width: 681px)
+.top-nav .logo-area .header-button {
+    padding: 0 1
+rem
+ 0.1875
+rem
+;
+}
+.top-nav .logo-area .header-button {
+    line-height: 0;
+    padding: 0 0.3
+rem
+ 0.1875
+rem
+;
+}
+.top-nav .header-column>a {
+    border-right: 0.0625
+rem
+ solid #49953f;
+}
+.header-button:link, .header-button:visited, .header-button:hover, .header-button:active {
+    color: #fff;
+    text-decoration: none;
+}
+@media only screen and (min-width: 681px)
 .header-button {
+    padding: 0 1
+rem
+;
+    line-height: 4rem;
+}
+.header-button {
+    display: block;
+    padding: 0;
+    line-height: 2.8125rem;
+    background-color: #4faf4e;
+    white-space: nowrap;
+    text-align: center;
+}
+/* .header-button {
     background-color: #4faf4e;
     padding: 20px;
-}
+} */
 
 .button.expanded {
     width: 100%;
