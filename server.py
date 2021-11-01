@@ -15,11 +15,12 @@ def show_homepage():
     
     return render_template("index.html")
 
-@app.route("/more")
-def show_more_info():
+@app.route("/more/<loanId>")
+def show_more_info(loanId):
     """Displays more information page."""
-
-    return render_template("more-info.html")
+    loan_id = loanId
+    loan_here = f"https://www.kiva.org/lend-beta/{loanId}"
+    return render_template("more-info.html", loan_id=loan_id, loan_here=loan_here)
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", debug = True)
