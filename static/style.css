@@ -72,7 +72,7 @@ rem
  solid #49953f;
 }
 .header-button:link, .header-button:visited, .header-button:hover, .header-button:active {
-    color: #fff;
+    color: rgb(253, 253, 241);
     text-decoration: none;
 }
 @media only screen and (min-width: 681px)
@@ -82,6 +82,10 @@ rem
 ;
     line-height: 4rem;
 }
+.navbar{
+    background-color: #4faf4e;
+    padding-bottom: 2px;
+}
 .header-button {
     display: block;
     padding: 0;
@@ -90,10 +94,12 @@ rem
     white-space: nowrap;
     text-align: center;
 }
-/* .header-button {
+.header-button {
     background-color: #4faf4e;
-    padding: 20px;
-} */
+    padding-bottom: 2px;
+    padding-inline-start: 10px;
+    
+}
 
 .button.expanded {
     width: 100%;
@@ -140,6 +146,7 @@ body {
 }
 html, body {
     font-size: 16px;
+
 }
 *, *:before, *:after {
     box-sizing: border-box;
@@ -176,7 +183,12 @@ html {
     top: 0;
     width: 100%;
 }
-.borrower-image-wrapper.absolute-positioned .borrower-image[data-v-524d879b], .borrower-image-wrapper.full-width-borrower-image .borrower-image[data-v-524d879b], .borrower-image-wrapper.offset-borrower-image .borrower-image[data-v-524d879b] {
+.borrower-image-wrapper.absolute-positioned 
+.borrower-image[data-v-524d879b], 
+.borrower-image-wrapper.full-width-borrower-image 
+.borrower-image[data-v-524d879b], 
+.borrower-image-wrapper.offset-borrower-image 
+.borrower-image[data-v-524d879b] {
     position: absolute;
 }
 a img, hr {
@@ -187,6 +199,8 @@ img {
     display: inline-block;
     height: auto;
     max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     vertical-align: middle;
 }
 img {
@@ -205,13 +219,8 @@ a {
     cursor: pointer;
     line-height: inherit;
     text-decoration: none;
-}
-user agent stylesheet
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-}
-.row {
+
+row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     display: -webkit-box;
@@ -222,8 +231,7 @@ a:-webkit-any-link {
     margin-left: auto;
     margin-right: auto;
     max-width: 61.875
-rem
-;
+    rem::after    ;
 }
 .www-page {
     -webkit-box-orient: vertical;
@@ -295,6 +303,4 @@ html {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
-
-
 
