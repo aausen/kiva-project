@@ -25,20 +25,14 @@
             }
         </style>
     <body>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navabar-light sticky-top">
-                <div class="navbar-nav">
-            
-            <!-- <div class="row"> -->
-            <div class="row">
-                <!-- <div class="col 3 small-3 large-2  xxlarge2 columns header-column logo-area"> -->
-                <div class="col-sm-4 col-xl-4">
-                    <a class="header-button" href="https://www.kiva.org/" aria-current="page" 
-                        class="header-logo header-button router-link-exact-active router-link-active">
-                    <svg width="3em" height="3em"
-                                
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 23" class="icon">
-                    <path d="M4.695.391H0v22.141h4.695V.391zm12.899 22.141h4.695V7.011h-4.695v15.521zm12.159 
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar sticky-top">
+            <a class="navbar-brand mr-0 mr-md-2 header-button" href="https://www.kiva.org/" 
+                aria-label="kiva homepage link" 
+                aria-current="page"><svg class="d-block header-logo header-button router-link-exact-active 
+                                                router-link-active" width="3em" height="3em"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 23" class="icon" focusable="false"> 
+                <title>KIVA Logo</title>
+                <path d="M4.695.391H0v22.141h4.695V.391zm12.899 22.141h4.695V7.011h-4.695v15.521zm12.159 
                         0h5.413l5.413-15.521h-4.662s-2.544 8.445-3.293 11.119h-.066c-.75-2.674-3.326-11.119-3.326-11.119h-4.956l5.477 
                         15.521zm-23.537-8.31c7.37 0 9.092-6.158 9.092-7.21h-.637c-7.372 0-9.094 6.157-9.094 7.21h.639zm-.639.969c0 
                         1.117 1.276 7.403 9.222 7.403h.638c0-1.119-1.277-7.403-9.221-7.403h-.639zM22.746 2.739C22.746 1.272 21.671 0 
@@ -46,19 +40,12 @@
                         7.011h-4.532V9.13c-.783-1.631-2.608-2.543-4.729-2.543-3.848 0-6.88 3.129-6.88 8.184 0 5.087 2.935 8.185 6.652 
                         8.185 2.608 0 4.173-1.272 4.956-2.675v2.25H57V7.011zm-4.663 8.151c0 2.871-1.76 4.208-3.522 4.208-1.924 
                         0-3.163-1.956-3.163-4.598 0-2.608 1.305-4.598 3.326-4.598 1.663 0 3.359 1.37 3.359 4.206v.782z" 
-                        fill="currentColor"></path></svg></a>
-                    <!-- <span class="hidden-aria show-for-sr">home</span></a> -->
-                    <!-- <div class="col 3 small-3 large-2 xxlarge-1 columns header-column">
-                        <div class="col 3 small-6 large-4 columns"> -->
-                </div>
-                <div class="btn col-md-4 col-xl-4"></div>
-                <div class="btn col-md-4 col-xl-4">
-                <a class="header-button" href="https://www.kiva.org/login">Sign in</a>
-                </div>
-                </div>
-            </div>
-            </nav>
-               
+                fill="currentColor"></path></svg></a> 
+            
+        </header>
+             
+        <div class="container-fluid">
+           
             <h1 class="display text-center">KIVA Lending Map</h1>
             <div class="header"> - Click on global map to see active borrowers
             </div>  
@@ -68,18 +55,9 @@
             <div id="map"></div> 
             <!-- <div class="modal-overlay"> -->
                 <div class="modal"></div>
-                
-            <!-- </div> -->
-            <div class="row align-center hide-for-large" data-v-c99c6e1a="" 
-                                                         data-v-2a319c46="">
-                <!--<div class="sm all-10" data-v-c99c6e1a="" data-v-2a319c46="">
-                    <a href="/lend-by-category" class="button  rounded expanded" 
-                                                data-v-2a319c46="" data-v-c99c6e1a="">
-                    
-                        Find a borrower </a>
-                    </div> -->   
-                                                                              
-            </div>      
+                <div class="row align-center hide-for-large" data-v-c99c6e1a="" 
+                                                         data-v-2a319c46=""></div>                                                                             </div> 
+
             <div class ="large-footer__block"><p>
                 Kiva is a 501(c)3 U.S. nonprofit fueled by passionate people.<br>
                 Founded in 2005, and based in San Francisco, with offices in Bangkok, Nairobi,<br>
@@ -90,22 +68,10 @@
         <!-- scripts for google maps -->
         <script src="/static/googlemap.js"></script>
         <script src="/static/index.js"></script>
-       
-
-
-        
-         <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
-                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
-                crossorigin="anonymous"></script>
-       
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
-                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
-                crossorigin="anonymous"></script> -->
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+                crossorigin="anonymous"></script>
         
     </body>
    
 </html>
-<!-- xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 23" class="icon"><path  -->
