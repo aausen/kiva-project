@@ -96,6 +96,8 @@ Clone my github repo onto your local machine
 Click the given link to localhost:5000 to view and run in your browser.
 
 
+_______________________________________________________________________
+
 Copyright 2021 Annie Ausen, Sam Swalve, Tuesday Kay
 
 Licensed under the Apache License, Version 2.0 (the "License");
